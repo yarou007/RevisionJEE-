@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="4.0" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd">
+    <servlet>
+        <servlet-name>listeetud</servlet-name>
+        <servlet-class>controller.listeetud</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ajoutetud</servlet-name>
+        <servlet-class>controller.ajoutetud</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>modifetud</servlet-name>
+        <servlet-class>controller.modifetud</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>suppetud</servlet-name>
+        <servlet-class>controller.suppetud</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>listeetud</servlet-name>
+        <url-pattern>/listeetud</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ajoutetud</servlet-name>
+        <url-pattern>/ajoutetud</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>modifetud</servlet-name>
+        <url-pattern>/modifetud</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>suppetud</servlet-name>
+        <url-pattern>/suppetud</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>
