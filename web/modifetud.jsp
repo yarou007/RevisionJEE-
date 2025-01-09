@@ -10,12 +10,13 @@
 <!DOCTYPE html>
 <%
    
-    Integer id = Integer.parseInt(request.getParameter("id"));
-    String nom = (String)request.getParameter("nom");
-    String prenom = (String) request.getParameter("prenom");
+    Integer id = Integer.parseInt(request.getParameter("id")); /// liste etudiant a la premeire fois 
+    
+    String nom = (String)request.getParameter("nom"); // null 
+    String prenom = (String) request.getParameter("prenom"); // null 
 
 
-    String msg = (String ) request.getAttribute("msg");
+    String msg = (String ) request.getAttribute("msg"); // Modif avec suucés
     %>
 <html>
     <head>
@@ -26,7 +27,7 @@
       <form method="POST" action="modifetud">
         <fieldset>
                <legend>Modifier etudiant</legend>
-                <input type="text"  name="id" value="<%=id%>" placeholder="Enter id" />
+                <input type="text"  name="id" value="<%=id%>" placeholder="Enter id" />  
                 <br>
                 <input type="text"  name="nom"  value="<%=nom%>" "placeholder="Enter nom" />
                 <br>

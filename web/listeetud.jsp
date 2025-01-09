@@ -44,7 +44,7 @@
                 <td><%=e.getId()%></td>
                 <td><%=e.getNom()%></td>
                 <td><%=e.getPrenom()%></td>
-                <td><a href="modifetud.jsp?id=<%= e.getId() %>" >Modif</a> / <a href="suppetud?id=<%= e.getId() %>">Suppr</a></td>
+                <td><a href="modifetud.jsp?id=<%= e.getId() %>&nom=<%= e.getNom()%>&prenom=<%= e.getPrenom()%>" >Modif</a> / <a href="suppetud?id=<%= e.getId() %>">Suppr</a></td>
 
             </tr>
             <%  } %>

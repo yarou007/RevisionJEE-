@@ -33,6 +33,7 @@ public class modifetud extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        
          Integer id = Integer.parseInt(request.getParameter("id"));
           
         JPAService jpa = new JPAService();
@@ -76,14 +77,15 @@ public class modifetud extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        Integer id = Integer.parseInt(request.getParameter("id"));
-       String nom = request.getParameter("nom");
-       String prenom = request.getParameter("prenom");
+        
+       Integer id = Integer.parseInt(request.getParameter("id")); // 5 
+       String nom = request.getParameter("nom"); // noussa -> AHAMED 
+       String prenom = request.getParameter("prenom"); // nasnoussa  -> dridi
        
        JPAService jpa = new JPAService();
        if (jpa.Connexion("RevisionInesPU")){
-           String msg = jpa.modifierEtudiant(id, nom, prenom);
-           request.setAttribute("msg", msg);
+           String msg = jpa.modifierEtudiant(id, nom, prenom);  // 5 ahhmed dridi 
+           request.setAttribute("msg", msg); // Modif avec suucés
        }
         RequestDispatcher rds = request.getRequestDispatcher("modifetud.jsp");
         rds.forward(request, response); 
